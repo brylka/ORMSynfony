@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edytuj osobę{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="my-3">Edytuj osobę</h1>
+
+        {{ form_start(form, {'action': path('app_person_edit', {'id': person.id})}) }}
+        {{ form_row(form.name, { 'label': 'Imię', 'attr': {'class': 'form-control'} }) }}
+        {{ form_row(form.surname, { 'label': 'Nazwisko', 'attr': {'class': 'form-control'} }) }}
+        {{ form_row(form.age, { 'label': 'Wiek', 'attr': {'class': 'form-control', 'min': 1} }) }}
+        {{ form_row(form.email, { 'label': 'Email', 'attr': {'class': 'form-control'} }) }}
+        {{ form_row(form.save, { 'label': 'Edytuj', 'attr': {'class': 'btn btn-primary'} }) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
