@@ -98,10 +98,10 @@ class PersonController extends AbstractController
 
         for ($i = 0; $i < 100; $i++) {
             $person = new Person();
-            $person->setName($faker->firstName)
-                ->setSurname($faker->lastName)
+            $person->setName($faker->firstName())
+                ->setSurname($faker->lastName())
                 ->setAge($faker->numberBetween(18, 100))
-                ->setEmail($faker->safeEmail);
+                ->setEmail($faker->safeEmail());
 
             $entityManager->persist($person);
             $people[] = $person;
