@@ -8,7 +8,6 @@ use App\Repository\PersonRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ApiResource]
-#[Get]
 #[ORM\Entity(repositoryClass: PersonRepository::class)]
 class Person
 {
