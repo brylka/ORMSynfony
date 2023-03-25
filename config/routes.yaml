@@ -4,13 +4,13 @@ controllers:
         namespace: App\Controller
     type: attribute
 
-app_i18n:
-    resource: '../src/Controller/'
-    type: annotation
-    prefix:
-        en: '/en'
-        pl: '/pl'
-    requirements:
-        _locale: 'en|pl'
-    defaults:
-        _locale: 'pl'
+#app_i18n:
+#    resource: '../src/Controller/'
+#    type: annotation
+#    prefix:
+#        en: '/en'
+#        pl: '/pl'
+#    requirements:
+#        _locale: 'en|pl'
+#    defaults:
+#        _locale: 'pl'

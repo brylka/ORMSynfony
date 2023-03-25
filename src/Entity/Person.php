@@ -2,9 +2,13 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\Get;
 use App\Repository\PersonRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+#[ApiResource]
+#[Get]
 #[ORM\Entity(repositoryClass: PersonRepository::class)]
 class Person
 {
